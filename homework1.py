@@ -17,8 +17,8 @@ def printing(var):
 
 first_var = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 second_var = tuple('abcdefghij')
-thread1 = Thread(target=printing, args=(first_var, ))
-thread1.start()
-# time.sleep(0.001)  # раскомментировать строку если при выводе потоков происходит склеивание чисел и строк
-thread2 = Thread(target=printing, args=(second_var, ))
-thread2.start()
+thread = Thread(target=printing, args=(first_var, ))
+thread.start()
+# time.sleep(0.5)  # раскомментировать строку если при выводе потоков происходит склеивание чисел и строк
+thread = Thread(target=printing, args=(second_var, ))
+thread.start()
