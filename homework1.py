@@ -19,6 +19,6 @@ first_var = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 second_var = tuple('abcdefghij')
 thread = Thread(target=printing, args=(first_var, ))
 thread.start()
-time.sleep(0.001)
+# time.sleep(0.001)  # раскомментировать строку если при выводе потоков происходит склеивание чисел и строк
 printing(second_var, )
 thread.join()
